@@ -21,6 +21,7 @@ import {
   ClipboardCheck,
 } from 'lucide-react';
 import ImageLightbox from '../../components/ImageLightbox';
+import heroPhoto from '../../assets/hero.jpg';
 import qss2 from '../../assets/QSS_2.jpg';
 import qss3 from '../../assets/QSS_3.jpg';
 import qss4 from '../../assets/QSS_4.jpg';
@@ -186,7 +187,12 @@ function HomePage() {
   return (
     <div id="top">
       {/* HERO */}
-      <header className="relative flex min-h-[560px] items-center overflow-hidden bg-gradient-to-br from-ink via-ink to-[#1E2430] px-6 py-24 text-[#F5F1E8] md:px-16">
+      <header className="relative flex min-h-[560px] items-center overflow-hidden px-6 py-24 text-[#F5F1E8] md:px-16">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroPhoto})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/30" />
         <div className="relative max-w-2xl">
           <div className="mb-6 flex flex-wrap items-center gap-3">
             {trustPoints.map((t) => (
